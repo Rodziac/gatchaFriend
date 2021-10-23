@@ -1,7 +1,7 @@
 .gatchaMachine {
     width: 275px;
     height: 454px;
-    background-image: url('/assets/gatcha.png');
+    background-image: url('../assets/gatcha.png');
     background-repeat: no-repeat;
     background-size: 100%;
     background-position: center;
@@ -58,12 +58,12 @@
 }
 
 .leftHalf {
-    background-image: url('/assets/leftShell.png');
+    background-image: url('../assets/leftShell.png');
     float: left;
 }
 
 .rightHalf {
-    background-image: url('/assets/rightShell.png');
+    background-image: url('../assets/rightShell.png');
     float: right;
 }
 
@@ -113,7 +113,7 @@
     height: 100%;
 }
 .ground {
-    background-image: url('/assets/grass.jpg');
+    background-image: url('../assets/grass.jpg');
     background-repeat: repeat;
     position: absolute;
     width: 100%;
@@ -121,7 +121,7 @@
 }
 
 .work {
-    background-image: url('/assets/work.png');
+    background-image: url('../assets/work.png');
     background-size: 100%;
     background-repeat: no-repeat;
     background-position: bottom center;
@@ -170,7 +170,7 @@
 }
 
 .shop {
-    background-image: url('/assets/shop.png');
+    background-image: url('../assets/shop.png');
     background-size: contain;
     background-repeat: no-repeat;
     width: 150px;
@@ -201,11 +201,11 @@
     right: 20px;
 }
 .navIcon.exit {
-    background-image: url('/assets/Cross.png');
+    background-image: url('../assets/Cross.png');
     top: 20px;
 }
 .navIcon.again {
-    background-image: url('/assets/Retry.png');
+    background-image: url('../assets/Retry.png');
     top: 95px;
 }
 .hud {
