@@ -55,7 +55,7 @@ const crackGatchaBall = () => {
             collection[winningShiny ? 'shiny' : 'common'].push(winning);
             winningShiny ? updateShiny() : updateCommon();
         }
-        prize.style.backgroundImage = `url('/assets/prizes/${winning}')${winningShiny ? ', linear-gradient(140deg, rgba(255,0,0,1) 0%, rgba(255,255,0,1) 20%, rgba(0,255,0,1) 40%, rgba(0,255,255,1) 60%, rgba(0,0,255,1) 80%, rgba(241,0,255,1) 100%)' : ''}`
+        prize.style.backgroundImage = `url('assets/prizes/${winning}')${winningShiny ? ', linear-gradient(140deg, rgba(255,0,0,1) 0%, rgba(255,255,0,1) 20%, rgba(0,255,0,1) 40%, rgba(0,255,255,1) 60%, rgba(0,0,255,1) 80%, rgba(241,0,255,1) 100%)' : ''}`
         gatchaBall.classList.add('crack');
     }
 }
