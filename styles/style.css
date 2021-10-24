@@ -1,3 +1,6 @@
+body {
+    user-select: none;
+}
 .gatchaMachine {
     width: 275px;
     height: 454px;
