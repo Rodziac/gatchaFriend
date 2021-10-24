@@ -3,38 +3,40 @@ let collection = window.localStorage.getItem('collection') ? JSON.parse(window.l
 
 const gatchaMachine = document.querySelector('.gatchaMachine');
 const moneyHud = document.querySelector('.money');
+const gatchaBall = document.querySelector('.gatchaBall');
 let gatchaShakeRequired = 2;
 let startedShaking = false;
 const shakeGatchaMachine = () => {
-    if (startedShaking || money >= 20 ) {
-        if (!startedShaking) {
-            startedShaking = true;
-            money -= 20;
-            updateMoney();
-        }
-        if (!gatchaMachine.classList.contains('shake') && !gatchaMachine.classList.contains('disappear')) {
-            if (!gatchaShakeRequired) {
-                revealGatchaBall();
-                startedShaking = false;
-                gatchaShakeRequired = 2;
-            } else {
-                gatchaMachine.classList.add('shake');
-                gatchaShakeRequired--;
-                setTimeout(() => {
-                    gatchaMachine.classList.remove('shake');
-                }, 500);
+    if (!gatchaBall.classList.contains('drop')) {
+        if (startedShaking || money >= 20) {
+            if (!startedShaking) {
+                startedShaking = true;
+                money -= 20;
+                updateMoney();
             }
+            if (!gatchaMachine.classList.contains('shake') && !gatchaMachine.classList.contains('disappear')) {
+                if (!gatchaShakeRequired) {
+                    revealGatchaBall();
+                    startedShaking = false;
+                    gatchaShakeRequired = 2;
+                } else {
+                    gatchaMachine.classList.add('shake');
+                    gatchaShakeRequired--;
+                    setTimeout(() => {
+                        gatchaMachine.classList.remove('shake');
+                    }, 500);
+                }
+            }
+        } else {
+            moneyHud.classList.add('blink');
+            setTimeout(() => {
+                moneyHud.classList.remove('blink');
+            }, 500);
         }
-    } else {
-        moneyHud.classList.add('blink');
-        setTimeout(() => {
-            moneyHud.classList.remove('blink');
-        }, 500);
     }
 }
 gatchaMachine.addEventListener('click', shakeGatchaMachine);
 
-const gatchaBall = document.querySelector('.gatchaBall');
 const revealGatchaBall = () => {
     gatchaBall.classList.add('drop');
     setTimeout(() => {
